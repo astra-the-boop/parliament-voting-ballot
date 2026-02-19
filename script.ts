@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     const response = await fetch("data.json");
     const data = await response.json();
 
-    Object.values(data.candidates).forEach((candidate: any, i: number)=> {
+    for(const key in data.candidates){
+        const candidate = data.candidates[key];
         const li = document.createElement("li");
         li.textContent = candidate.fullName;
+        li.dataset.id = key;
 
-    })
-
+        list.appendChild(li);
+    }
 
     const electionCycle:Date = new Date(data.electionCycle);
 
