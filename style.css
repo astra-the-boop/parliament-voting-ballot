@@ -90,3 +90,19 @@ hr{
     background-color: #777777;
     margin: 3rem 2rem;
 }
+
+ul{
+    list-style: none;
+}
+
+li{
+    cursor: grab;
+}
+
+.candidateContainer{
+    width: 80%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    pointer-events: none;
+}

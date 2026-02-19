@@ -1,4 +1,5 @@
 console.log("dsafk");
+declare var Sortable:any;
 
 document.addEventListener('DOMContentLoaded', async (event) => {
     const list = document.getElementById('candidateList') as HTMLUListElement;
@@ -8,11 +9,18 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     for(const key in data.candidates){
         const candidate = data.candidates[key];
         const li = document.createElement("li");
-        li.textContent = candidate.fullName;
+        li.innerHTML = `<div class="candidateContainer">
+${candidate.fullName}
+</div>`;
+        // candidate.fullName;
         li.dataset.id = key;
 
         list.appendChild(li);
     }
+
+    new Sortable(list, {
+        animation: 150
+    });
 
     const electionCycle:Date = new Date(data.electionCycle);
 
