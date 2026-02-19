@@ -10,8 +10,25 @@
     <img src="parliament-full.svg" id="parliament-logo-header">
   </div>
   <div id="body">
-    <h1 id="body-header">National General Elections eBallot</h1>
+      <h1 id="body-header">National General Elections eBallot</h1>
+      <h2 id="body-subheader">Official voting ballot for the Democratic Republic of Hack Club</h2>
+      <div class="container">
+          <form>
+              <h2>Identification:</h2>
+              <label for="slackId"><b id="slackId-label">Slack ID</b></label><input id="slackId"><br>
+              <label for="voterId"><b id="voterId-label">Voter ID</b></label><input id="voterId"><br><br>
+              <p>Haven't gotten your Voting identification information yet? Click <b><a href="https://voterid.hcgov.uk" target="_blank">here</a></b> to obtain them.</p>
+              <hr>
+              <h2>Voting:</h2>
+              <ul id="candidateList" class="rank-list">
+              </ul>
+
+          </form>
+
+
+      </div>
   </div>
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
