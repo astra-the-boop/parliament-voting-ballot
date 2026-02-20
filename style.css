@@ -216,3 +216,7 @@ li{
     margin-left: 2.5rem;
     margin-right: 4rem;
 }
+
+#timeTil{
+    font-weight: bold;
+}
