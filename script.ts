@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         beforeEl.style.display = "block";
         submit.disabled = true;
         const updateCountdown = ()=>{
-            const diff = electionStart - now;
+            const nowx = Math.floor(Date.now()/1000);
+            const diff = electionStart - nowx;
             if(diff<=0){
                 beforeEl.style.display = "none";
                 submit.disabled = false;
