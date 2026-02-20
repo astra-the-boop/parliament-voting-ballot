@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         const candidate = data.candidates[key];
         const li = document.createElement("li");
         li.innerHTML = `<div class="candidateContainer">
-${candidate.fullName}
+<div class="dragIndicator">⠿</div>
+<div class="candidateDetailsContainer"><div class="candidateName">${candidate.fullName}</div><div class="candidateAbbreviation">${candidate.abbreviation}</div></div>
 </div>`;
         // candidate.fullName;
         li.dataset.id = key;

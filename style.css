@@ -93,6 +93,8 @@ hr{
 
 ul{
     list-style: none;
+    margin-left: 0;
+    padding: 0;
 }
 
 li{
@@ -103,6 +105,26 @@ li{
     width: 80%;
     margin: 0.5rem;
     padding: 0.5rem;
-    background-color: white;
+    background-color: #b0bbcc;
     pointer-events: none;
+}
+
+.dragIndicator{
+    display: inline-block;
+    width: 3%;
+}
+
+.candidateName{
+    /*font-weight: bold;*/
+    color: #000;
+}
+
+.candidateAbbreviation{
+    font-family: monospace;
+}
+
+.candidateDetailsContainer{
+    display:inline-flex;
+    width: 95%;
+    justify-content: space-between;
 }
