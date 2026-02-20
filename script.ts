@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     const timeTil = document.getElementById("timeTil") as HTMLSpanElement;
 
     const beforeEl = document.getElementById("before") as HTMLDivElement;
+    const afterEl = document.getElementById("after") as HTMLDivElement;
+
+    if(now > electionEnd){
+        afterEl.style.display = "block";
+        submit.disabled = true;
+    }
+
     if(now < electionStart){
         beforeEl.style.display = "block";
         submit.disabled = true;

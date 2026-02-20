@@ -195,7 +195,7 @@ li{
     margin: 5rem auto 3rem auto;
 }
 
-#before{
+#before, #after{
     background-color: #ec3750;
     color: white;
     border-radius: 0.6rem;
@@ -203,4 +203,16 @@ li{
     display: none;
     width: 70%;
     margin: 2rem auto 0 auto;
+}
+
+#submit:disabled{
+    cursor: not-allowed;
+    background-color: #c0cbda;
+    border: 2px solid white;
+}
+
+#blegh{
+    font-size: 1.2rem;
+    margin-left: 2.5rem;
+    margin-right: 4rem;
 }
