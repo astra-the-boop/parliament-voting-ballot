@@ -97,4 +97,18 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             })
         });
     })
+
+    const here:HTMLElement = document.getElementById("here") as HTMLElement;
+    const iframe:HTMLIFrameElement = document.getElementById("iframeContainer") as HTMLIFrameElement;
+    let iframeShowing:boolean = false;
+
+    here.addEventListener("click", async () => {
+        if(!iframeShowing){
+            iframe.style.display = "block";
+            iframeShowing = true;
+        }else{
+            iframe.style.display = "none";
+            iframeShowing = false;
+        }
+    })
 })

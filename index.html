@@ -24,7 +24,11 @@
           <h2>Identification:</h2>
           <label for="slackId"><b id="slackId-label">Slack ID</b></label><input id="slackId" placeholder="Required"><br>
           <label for="voterId"><b id="voterId-label">Voter ID</b></label><input id="voterId" placeholder="Required"><br><br>
-          <p id="blegh">Haven't gotten your Voting identification information yet? Click <b><a href="https://voterid.hcgov.uk" target="_blank">here</a></b> to obtain them.</p>
+          <p id="blegh">Haven't gotten your Voting identification information yet? Click <b><a id="here" target="_blank">here</a></b> to obtain them.</p>
+          <div id="iframeContainer">
+              <iframe id="iframe" src="https://voterid.hcgov.uk"></iframe>
+              <p>Embed above doesn't work? Click <a href="https://voterid.hcgov.uk">here</a> instead</p>
+          </div>
           <hr>
           <h2>Voting:</h2>
           <p id="qwerty">Unsure how this works? Check out our guide to Ranked Choice Voting <a target="_blank" href="https://parliament.hcgov.uk/vote.html">here</a>.</p>

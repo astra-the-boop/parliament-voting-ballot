@@ -220,3 +220,29 @@ li{
 #timeTil{
     font-weight: bold;
 }
+
+#iframe{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30rem;
+    border: 1px solid #333333;
+    border-radius: 7.5px;
+}
+
+#iframeContainer{
+    display:none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+#here{
+    color: #ec3750;
+}
+
+#here:hover{
+    cursor: pointer;
+    color: #a633d6;
+}
