@@ -6,6 +6,16 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     const list = document.getElementById('candidateList') as HTMLUListElement;
     const response = await fetch("data.json");
     const data = await response.json();
+    const electionStart:number = Number(data.electionStart);
+    const electionEnd:number = Number(data.electionEnd);
+    const now = Math.floor(Date.now()/1000);
+
+    const beforeEl = document.getElementById("before") as HTMLDivElement;
+    if(now < electionStart){
+        beforeEl.style.display = "block";
+        submit.disabled = true;
+
+    }
 
     for(const key in data.candidates){
         const candidate = data.candidates[key];
