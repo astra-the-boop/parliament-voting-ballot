@@ -133,10 +133,33 @@ li{
     width: 100%
 }
 
-div{
-    border: 1px solid black;
-}
+/*div{*/
+/*    border: 1px solid black;*/
+/*}*/
 
 #listContainer{
     width: 100%;
+}
+
+#morePreferred{
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    margin-top: 1rem
+}
+
+#lessPreferred{
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    margin-bottom: 2rem;
+}
+
+#thing{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#qwerty{
+    margin-left: 1rem;
 }
