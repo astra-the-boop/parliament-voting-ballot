@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         });
 
         console.log(rankedCandidates);
+
+        alert("eBallot submitted successfully");
+
         await fetch("http://localhost:3297/submit-vote", {
             method: "POST",
             headers:{"Content-Type": "application/json"},
@@ -55,7 +58,5 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             })
 
         });
-
-        alert("eBallot submitted successfully");
     })
 })
