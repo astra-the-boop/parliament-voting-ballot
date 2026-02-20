@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                 slackId,voterId, rankedCandidates
             })
 
-        })
+        });
+
+        alert("eBallot submitted successfully");
     })
 })

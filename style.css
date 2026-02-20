@@ -187,3 +187,8 @@ li{
     display: flex;
     justify-content: flex-end;
 }
+
+#footer{
+    width: 60%;
+    margin: 5rem auto 3rem auto;
+}
