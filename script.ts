@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 <div class="candidateDetailsContainer"><div class="candidateName">${candidate.fullName}</div><div class="candidateAbbreviation">${candidate.abbreviation}</div></div>
 </div>`;
         // candidate.fullName;
-        li.dataset.id = key;
+        li.dataset.fullName = candidate.fullName;
 
         list.appendChild(li);
     }
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         }
 
         const rankedCandidates = Array.from(list.children).map(li => {
-            return (li as HTMLElement).dataset.id;
+            return (li as HTMLElement).dataset.fullName;
         });
 
         console.log(rankedCandidates);
@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', async (event) => {
             body: JSON.stringify({
                 slackId,voterId, rankedCandidates
             })
-
         });
     })
 })
