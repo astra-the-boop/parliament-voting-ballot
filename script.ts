@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         });
 
         console.log(rankedCandidates);
-        await fetch("/submit-vote", {
+        await fetch("http://localhost:3297/submit-vote", {
             method: "POST",
             headers:{"Content-Type": "application/json"},
             body: JSON.stringify({
