@@ -86,6 +86,9 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 
         alert("eBallot submitted successfully");
 
+        submit.disabled = true;
+        submit.innerText = "Ballot already submitted"
+
         await fetch("http://localhost:3297/submit-vote", {
             method: "POST",
             headers:{"Content-Type": "application/json"},
