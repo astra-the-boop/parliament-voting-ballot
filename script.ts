@@ -96,6 +96,8 @@ document.addEventListener('DOMContentLoaded', async (event) => {
                 slackId,voterId, rankedCandidates
             })
         });
+
+        window.open("")
     })
 
     const here:HTMLElement = document.getElementById("here") as HTMLElement;

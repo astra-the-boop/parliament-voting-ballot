@@ -84,6 +84,7 @@ input{
 
 label{
     margin-left: 1rem;
+    margin-top: 0.5rem;
 }
 
 hr{
@@ -240,9 +241,10 @@ li{
 
 #here{
     color: #ec3750;
+    transition: color 0.05s ease-in-out;
 }
 
 #here:hover{
     cursor: pointer;
-    color: #a633d6;
+    color: #338eda;
 }
