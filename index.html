@@ -13,17 +13,19 @@
       <h1 id="body-header">National General Elections eBallot</h1>
       <h2 id="body-subheader">Official voting ballot for the Democratic Republic of Hack Club</h2>
       <div class="container">
-          <form>
-              <h2>Identification:</h2>
-              <label for="slackId"><b id="slackId-label">Slack ID</b></label><input id="slackId"><br>
-              <label for="voterId"><b id="voterId-label">Voter ID</b></label><input id="voterId"><br><br>
-              <p>Haven't gotten your Voting identification information yet? Click <b><a href="https://voterid.hcgov.uk" target="_blank">here</a></b> to obtain them.</p>
-              <hr>
-              <h2>Voting:</h2>
-              <p id="qwerty">Unsure how this works? Check out our guide to Ranked Choice Voting <a href="https://parliament.hcgov.uk/vote.html">here</a>.</p>
-              <div id="asdf"><div id="thing"><div id="morePreferred"><p>More preferred →</p></div><div id="lessPreferred"><p>← Less preferred</p></div></div>
-                  <div id="listContainer"><ul id="candidateList" class="rank-list"></ul></div></div>
-          </form>
+          <h2>Identification:</h2>
+          <label for="slackId"><b id="slackId-label">Slack ID</b></label><input id="slackId" placeholder="Required"><br>
+          <label for="voterId"><b id="voterId-label">Voter ID</b></label><input id="voterId" placeholder="Required"><br><br>
+          <p>Haven't gotten your Voting identification information yet? Click <b><a href="https://voterid.hcgov.uk" target="_blank">here</a></b> to obtain them.</p>
+          <hr>
+          <h2>Voting:</h2>
+          <p id="qwerty">Unsure how this works? Check out our guide to Ranked Choice Voting <a target="_blank" href="https://parliament.hcgov.uk/vote.html">here</a>.</p>
+          <div id="asdf"><div id="thing"><div id="morePreferred"><p>More preferred →</p></div><div id="lessPreferred"><p>← Less preferred</p></div></div>
+              <div id="listContainer"><ul id="candidateList" class="rank-list"></ul></div></div>
+          <div id="cunt">
+              <button id="submit">Submit</button>
+          </div>
+
       </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
