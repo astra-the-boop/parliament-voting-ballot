@@ -47,5 +47,13 @@ document.addEventListener('DOMContentLoaded', async (event) => {
         });
 
         console.log(rankedCandidates);
+        await fetch("/submit-vote", {
+            method: "POST",
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify({
+                slackId,voterId, rankedCandidates
+            })
+
+        })
     })
 })
