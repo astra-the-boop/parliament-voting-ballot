@@ -9,12 +9,30 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     const electionStart:number = Number(data.electionStart);
     const electionEnd:number = Number(data.electionEnd);
     const now = Math.floor(Date.now()/1000);
+    const timeTil = document.getElementById("timeTil") as HTMLSpanElement;
 
     const beforeEl = document.getElementById("before") as HTMLDivElement;
     if(now < electionStart){
         beforeEl.style.display = "block";
         submit.disabled = true;
+        const updateCountdown = ()=>{
+            const diff = electionStart - now;
+            if(diff<=0){
+                beforeEl.style.display = "none";
+                submit.disabled = false;
+                clearInterval(interval);
+                return;
+            }
+            const days = Math.floor(diff/86400);
+            const hours = Math.floor((diff % 86400)/3600);
+            const minutes = Math.floor((diff % 3600)/60);
+            const seconds = diff % 60;
 
+            timeTil.innerText = `${days} days, ${hours}h, ${minutes}m, ${seconds}s`;
+        }
+
+        updateCountdown();
+        const interval = setInterval(updateCountdown, 1000);
     }
 
     for(const key in data.candidates){
